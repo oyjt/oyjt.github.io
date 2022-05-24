@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"oyjt.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="博客更换主题之后，查阅NexT 主题使用文档时，发现博客有文章阅读量统计功能，就想着也加上去。文档上虽然有相关介绍，但是发现新的主题已经集成了部分功能，内容有些出入。所以有了这边文章。 修改_config.yml文件打开NexT主题的根目录下的_config.yml文件，找到以下内容： 1234leancloud_visitors:  enable: false  app_id: #&lt;App">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为博客文章添加阅读量统计功能">
+<meta property="og:url" content="http://oyjt.github.io/2016/04/09/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/index.html">
+<meta property="og:site_name" content="小道博客">
+<meta property="og:description" content="博客更换主题之后，查阅NexT 主题使用文档时，发现博客有文章阅读量统计功能，就想着也加上去。文档上虽然有相关介绍，但是发现新的主题已经集成了部分功能，内容有些出入。所以有了这边文章。 修改_config.yml文件打开NexT主题的根目录下的_config.yml文件，找到以下内容： 1234leancloud_visitors:  enable: false  app_id: #&lt;App">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410180256.png">
+<meta property="og:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410181221.png">
+<meta property="og:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410182354.png">
+<meta property="og:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410182630.png">
+<meta property="og:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410182833.png">
+<meta property="og:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410183142.png">
+<meta property="og:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410183807.png">
+<meta property="og:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410185257.png">
+<meta property="article:published_time" content="2016-04-09T10:40:37.000Z">
+<meta property="article:modified_time" content="2022-05-23T10:20:06.903Z">
+<meta property="article:author" content="江阳小道">
+<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="next">
+<meta property="article:tag" content="主题">
+<meta property="article:tag" content="统计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410180256.png">
+
+<link rel="canonical" href="http://oyjt.github.io/2016/04/09/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>为博客文章添加阅读量统计功能 | 小道博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="小道博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">小道博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Android和前端知识的技术积累</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://oyjt.github.io/2016/04/09/%E4%B8%BA%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0%E6%B7%BB%E5%8A%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="江阳小道">
+      <meta itemprop="description" content="有时间就写博客，没时间就等着写博客。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小道博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          为博客文章添加阅读量统计功能
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2016-04-09 18:40:37" itemprop="dateCreated datePublished" datetime="2016-04-09T18:40:37+08:00">2016-04-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-23 18:20:06" itemprop="dateModified" datetime="2022-05-23T18:20:06+08:00">2022-05-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>博客更换主题之后，查阅<a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">NexT 主题使用文档</a>时，发现博客有文章阅读量统计功能，就想着也加上去。文档上虽然有相关介绍，但是发现新的主题已经集成了部分功能，内容有些出入。所以有了这边文章。</p>
+<h3 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改<code>_config.yml</code>文件</h3><p>打开NexT主题的根目录下的<code>_config.yml</code>文件，找到以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">leancloud_visitors:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">app_id:</span> <span class="comment">#&lt;AppID&gt;</span></span><br><span class="line">  <span class="attr">app_key:</span> <span class="comment">#&lt;AppKEY&gt;</span></span><br></pre></td></tr></table></figure>
+<p>将<code>enable：false</code>改为<code>enable：true</code>。</p>
+<h3 id="注册LeanCloud"><a href="#注册LeanCloud" class="headerlink" title="注册LeanCloud"></a>注册<a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a></h3><p>NexT的修改工作就完成之后，需要注册一个LeanCloud帐号才能继续使用这个功能。因为这个功能依赖于LeanCloud提供后端数据存取。<a target="_blank" rel="noopener" href="https://leancloud.cn/login.html#/signin"><strong>点我快速注册</strong></a>。</p>
+<h3 id="配置LeanCloud"><a href="#配置LeanCloud" class="headerlink" title="配置LeanCloud"></a>配置<a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a></h3><p>注册完成LeanCloud帐号并验证邮箱之后，登录LeanCloud帐号。进行一番配置之后拿到AppID以及AppKey这两个参数，然后就可以正常使用文章阅读量统计的功能了。</p>
+<h4 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h4><p>点击创建应用<br><img src="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410180256.png" alt="创建应用"><br>输入应用名，可以随意输入（之后可以更改），然后点击创建即可。<br><img src="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410181221.png" alt="输入应用名"></p>
+<h4 id="数据管理"><a href="#数据管理" class="headerlink" title="数据管理"></a>数据管理</h4><p>应用创建成功之后进入数据管理<br><img src="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410182354.png" alt="进入数据管理"><br>在应用的数据配置界面，左侧下划线开头的都是系统预定义好的表，为了便于区分我们新建一张表来保存我们的数据。点击左侧右上角的齿轮图标，新建Class<br><img src="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410182630.png" alt="新建Class"><br>点击创建Class之后，为了保证我们前面对NexT主题的兼容，此处的新建Class名字必须为<code>Counter</code><br><img src="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410182833.png" alt="命名Class为Counter"><br>创建完成之后，左侧数据栏应该会多出一栏名为Counter的栏目，这个时候我们点击顶部的设置，切换到应用的操作界面<br><img src="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410183142.png" alt="打开应用设置"></p>
+<h4 id="获取AppID、AppKey"><a href="#获取AppID、AppKey" class="headerlink" title="获取AppID、AppKey"></a>获取AppID、AppKey</h4><p>在弹出的界面中，选择左侧的应用Key选项，即可发现我们创建应用的AppID以及AppKey<br><img src="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410183807.png" alt="获取AppID、AppKey"><br>复制AppID以及AppKey并在NexT主题的_config.yml文件中我们相应的位置填入即可，正确配置之后文件内容像这个样子:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">leancloud_visitors:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">app_id:</span> <span class="string">你的AppID</span></span><br><span class="line">  <span class="attr">app_key:</span> <span class="string">你的AppKey</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="重新部署Hexo博客"><a href="#重新部署Hexo博客" class="headerlink" title="重新部署Hexo博客"></a>重新部署Hexo博客</h3><p>配置完成之后，重新生成部署Hexo博客，就可以正常使用文章阅读量统计的功能了。<br>需要特别说明的是：<br>记录文章访问量的唯一标识符是文章的发布日期以及文章的标题，因此请确保这两个数值组合的唯一性，如果你更改了这两个数值，会造成文章阅读数值的清零重计。</p>
+<h3 id="后台管理"><a href="#后台管理" class="headerlink" title="后台管理"></a>后台管理</h3><p>现在查看博客，会发现文章的统计量显示为0，而且这个时候我们LeanCloud对应的应用的Counter表中并没有相应的记录。当博客文章在配置好阅读量统计服务之后第一次打开时，便会自动向服务器发送数据来创建一条数据，该数据会被记录在对应的应用的Counter表中。<br><img src="http://7xstlp.com2.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160410185257.png" alt="后台数据管理"><br>我们可以修改其中的time字段的数值来达到修改某一篇文章的访问量的目的。双击具体的数值，修改之后回车即可保存。<br>注：</p>
+<ul>
+<li>url字段被当作唯一ID来使用，因此如果你不知道带来的后果的话请不要修改。</li>
+<li>title字段显示的是博客文章的标题，用于后台管理的时候区分文章之用，没有什么实际作用。</li>
+<li>其他字段皆为自动生成，具体作用请查阅LeanCloud官方文档，如果你不知道有什么作用请不要随意修改。</li>
+</ul>
+<p>至此，为博客文章添加阅读量统计功能就已经实现了。希望从此写博客能更有动力！</p>
+<p>参考资料：<br><a target="_blank" rel="noopener" href="https://notes.wanghao.work/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html">为NexT主题添加文章阅读量统计功能</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag"># 随笔</a>
+              <a href="/tags/hexo/" rel="tag"># hexo</a>
+              <a href="/tags/next/" rel="tag"># next</a>
+              <a href="/tags/%E4%B8%BB%E9%A2%98/" rel="tag"># 主题</a>
+              <a href="/tags/%E7%BB%9F%E8%AE%A1/" rel="tag"># 统计</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2016/01/16/hexo%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/" rel="prev" title="hexo博客更换主题">
+      <i class="fa fa-chevron-left"></i> hexo博客更换主题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2016/04/18/%E5%9C%A8Android%20Studio%E4%B8%8B%E4%BD%BF%E7%94%A8Hierarchy%20Viewer/" rel="next" title="在Android Studio下使用Hierarchy Viewer">
+      在Android Studio下使用Hierarchy Viewer <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-config-yml%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">修改_config.yml文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E5%86%8CLeanCloud"><span class="nav-number">2.</span> <span class="nav-text">注册LeanCloud</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AELeanCloud"><span class="nav-number">3.</span> <span class="nav-text">配置LeanCloud</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%BA%94%E7%94%A8"><span class="nav-number">3.1.</span> <span class="nav-text">创建应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86"><span class="nav-number">3.2.</span> <span class="nav-text">数据管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8E%B7%E5%8F%96AppID%E3%80%81AppKey"><span class="nav-number">3.3.</span> <span class="nav-text">获取AppID、AppKey</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2Hexo%E5%8D%9A%E5%AE%A2"><span class="nav-number">4.</span> <span class="nav-text">重新部署Hexo博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86"><span class="nav-number">5.</span> <span class="nav-text">后台管理</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">江阳小道</p>
+  <div class="site-description" itemprop="description">有时间就写博客，没时间就等着写博客。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/oyjt" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;oyjt" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="http://weibo.com/oyjt001" title="Weibo → http:&#x2F;&#x2F;weibo.com&#x2F;oyjt001" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2015 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">江阳小道</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
