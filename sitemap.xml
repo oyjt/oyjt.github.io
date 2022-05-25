@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://oyjt.github.io/categories/index.html</loc>
+    <loc>http://oyjt.github.io/about/index.html</loc>
     
     <lastmod>2022-05-23</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://oyjt.github.io/about/index.html</loc>
+    <loc>http://oyjt.github.io/categories/index.html</loc>
     
     <lastmod>2022-05-23</lastmod>
     
@@ -173,13 +173,6 @@
   </url>
   
   <url>
-    <loc>http://oyjt.github.io/tags/%E7%BB%9F%E8%AE%A1/</loc>
-    <lastmod>2022-05-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://oyjt.github.io/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -195,6 +188,13 @@
   
   <url>
     <loc>http://oyjt.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2022-05-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://oyjt.github.io/tags/%E7%BB%9F%E8%AE%A1/</loc>
     <lastmod>2022-05-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
