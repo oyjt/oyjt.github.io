@@ -31,8 +31,8 @@
 <meta property="article:published_time" content="2016-01-14T10:22:23.000Z">
 <meta property="article:modified_time" content="2022-05-24T07:54:13.819Z">
 <meta property="article:author" content="江阳小道">
-<meta property="article:tag" content="markdown">
 <meta property="article:tag" content="随笔">
+<meta property="article:tag" content="markdown">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.zybuluo.com/static/img/my_head.jpg">
 
@@ -345,8 +345,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/markdown/" rel="tag"># markdown</a>
               <a href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag"># 随笔</a>
+              <a href="/tags/markdown/" rel="tag"># markdown</a>
           </div>
 
         
@@ -655,7 +655,8 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       admin       : ['oyjt'],
       id          : '88cb060a8b56868de0321fce2005048d',
         language: 'zh-CN',
-      distractionFreeMode: true
+      distractionFreeMode: true,
+      proxy: 'https://lively-sky-2a32.oyjt001.workers.dev/?https://github.com/login/oauth/access_token'
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);

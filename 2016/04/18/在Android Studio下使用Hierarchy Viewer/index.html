@@ -584,7 +584,8 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
       admin       : ['oyjt'],
       id          : '85c372b3cb0e82108afba33041b2aa9a',
         language: 'zh-CN',
-      distractionFreeMode: true
+      distractionFreeMode: true,
+      proxy: 'https://lively-sky-2a32.oyjt001.workers.dev/?https://github.com/login/oauth/access_token'
     });
     gitalk.render('gitalk-container');
   }, window.Gitalk);
